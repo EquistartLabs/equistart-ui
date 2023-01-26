@@ -17,6 +17,7 @@ import { providers, utils } from "ethers";
 import { AccountBalances, ChainNamespaces, getAllChainNamespaces } from "../helpers";
 import { Linking } from "react-native";
 import Config from "../env";
+import { WALLET_UNIVERAL_LINKS } from "../constants";
 /**
  * Types
  */
@@ -101,9 +102,9 @@ export function ClientContextProvider({ children }: { children: ReactNode | Reac
       }
 
       _client.on("display_uri", async (uri: string) => {
-        console.log("EVENT", "QR Code Modal open");
-        console.log(uri);
-        Linking.openURL(uri);
+        console.log("EVENT", "Open Wallet popup Modal open");
+        console.log(WALLET_UNIVERAL_LINKS[0] + uri);
+        Linking.openURL(`${WALLET_UNIVERAL_LINKS[0]}wc?uri=${uri}`);
       });
 
       // Subscribe to session ping
