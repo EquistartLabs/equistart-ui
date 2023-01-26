@@ -26,3 +26,8 @@ export enum DEFAULT_EIP_155_EVENTS {
   ETH_ACCOUNTS_CHANGED = "accountsChanged",
 }
 
+export const BLOCKCHAIN_LOGO_BASE_URL = "https://blockchain-api.xyz/logos/";
+
+export const WALLET_UNIVERAL_LINKS = [
+  "https://valoraapp.com/",
+];
