@@ -1,7 +1,7 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { useWalletConnectClient } from "./../contexts/ClientContext";
-import { DEFAULT_TEST_CHAINS } from '../constants';
+import { DEFAULT_TEST_CHAINS, DEFAULT_MAIN_CHAINS } from '../constants';
 
 const Index = () => {
   const {
@@ -19,7 +19,8 @@ const Index = () => {
   } = useWalletConnectClient();
 
   function handleConnect() {
-    connect(DEFAULT_TEST_CHAINS[4]);
+    console.log("Connecting chain: ",DEFAULT_MAIN_CHAINS[5] )
+    connect(DEFAULT_MAIN_CHAINS[5]);
   }
 
   const handleDisconnect = () => {
