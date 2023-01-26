@@ -26,10 +26,16 @@ const Index = () => {
     disconnect();
   }
 
+  const fetchBalance = () => {
+    console.log("Balance:",balances)
+  }
+
+  
   return (
-    <View>
+    <View style={{margin: '10%'}}>
       <Button title='Connect' onPress={handleConnect} disabled={isInitializing} />
       <Button title='Disconnect' onPress={handleDisconnect} disabled={!session} />
+      <Button title= "Get Balance" onPress={fetchBalance} /> 
     </View>
   )
 }
