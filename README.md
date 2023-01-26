@@ -11,6 +11,7 @@ $cd ..
 check connected device and emulators: $xcrun xctrace list devices
 or 
 $xcrun instruments -s devices
+$npm install -g ios-deploy 
 Run app on device using: $yarn ios --device "Kool's iPhone"
 or 
 $yarn ios --udid 0412e2c2******51699
